@@ -39,6 +39,10 @@ function handleShipAnimation() {
 
 function RenderNewObject(context) {
   // Draw a new item here using the canvas 'context' variable
+  context.fillRect(25,25,25,25);
+  var time = new Date();
+  //context.clearRect();
+  context.rotate(((2 * Math.PI) / 6) * time.getSeconds() + ((2* Math.PI)/6000) * time.getMilliseconds());
 }
 
 function HandleNewObjectMovement() {
