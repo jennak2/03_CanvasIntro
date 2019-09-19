@@ -39,10 +39,12 @@ function handleShipAnimation() {
 
 function RenderNewObject(context) {
   // Draw a new item here using the canvas 'context' variable
-  context.fillRect(25,25,25,25);
-  var time = new Date();
-  //context.clearRect();
-  context.rotate(((2 * Math.PI) / 6) * time.getSeconds() + ((2* Math.PI)/6000) * time.getMilliseconds());
+  context.fillRect(NEW_OBJECT.x,NEW_OBJECT.y,25,25);
+  if(NEW_OBJECT.x >= 0 && NEW_OBJECT.x< GAME.canvas.width-50){
+    NEW_OBJECT.x += 10;
+  }
+
+
 }
 
 function HandleNewObjectMovement() {
